@@ -2,3 +2,9 @@ body {
     background-color: #eef4f8;
     font-family: Arial;
 }
+
+.col form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
