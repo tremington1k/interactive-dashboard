@@ -3,7 +3,7 @@
 This project is a web-based dashboard built for WEB-115 to demonstrate interactive JavaScript features.
 
 ## TODO: Future Enhancements
-- [ ] Add a metric conversion tool.
+- [X] Add a metric conversion tool.
 - [ ] Integrate a task list with array storage.
 - [ ] Add JavaScript logic for a live clock.
 - [X] Add a weekly task goal calculator.
@@ -70,3 +70,6 @@ BEGIN
 	DISPLAY result + “ ” + outputUnit
 END
 ```
+## Magic Eight Ball
+
+The game accepts and checks for user input and displays a random answer when the user clicks on the "ball" image.
