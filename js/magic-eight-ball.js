@@ -32,3 +32,13 @@ document.getElementById("ball").addEventListener("mousedown", function() {
 document.getElementById("reset").addEventListener("click", function() {
   document.getElementById("circle").style.display = "none";
 });
+
+// Event listener for adding a new 8-ball response
+document.getElementById("addResponse").addEventListener('click', () => {
+	let newResponse = prompt("Enter a new 8-ball response:");
+	if(newResponse) {
+		answers.push(newResponse);
+		console.log("New response added: " + newResponse);
+		console.log("There is a total of: " + answers.length + " responses.");
+	}
+});
