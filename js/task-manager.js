@@ -1,3 +1,6 @@
+let myTasks = [];
+
+
 // Calculates total weekly goal and returns a message with the user's name and total weekly goal
 function weeklyGoal(userName, dailyGoal, bonusTasks) {
     let weeklyGoal = dailyGoal * 5
@@ -17,4 +20,26 @@ document.getElementById("goal-btn").addEventListener("click", function(event) {
     let bonusTasks = parseInt(document.getElementById("bonus-tasks").value);
 
     weeklyGoal(userName, dailyGoal, bonusTasks);
+});
+
+
+// Initializes the task list container and creates a new unordered list for user tasks
+let taskList = document.getElementById("task-list");
+let userTasks = document.createElement("ul")
+userTasks.id = "user-tasks";
+taskList.appendChild(userTasks);
+
+// Event listener for the add task button click event
+document.getElementById("add-task").addEventListener("click", function(event) {
+    event.preventDefault();
+
+    let taskText = document.getElementById("task-name").value.trim();
+
+    if (taskText !== "") {
+        myTasks.push(taskText);
+        let listItem = document.createElement("li");
+        listItem.textContent = taskText;
+        userTasks.appendChild(listItem);
+    }
+
 });
