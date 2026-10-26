@@ -38,13 +38,23 @@
                     <button id="goal-btn">Submit</button>
                 </form>
                 <p id="goal-message"></p>
-                <div id="task-list"> <!-- M7 Assignment: Task Manager with DOM -->
+                <div id="task-list"> <!-- M7 Assignment: Task Manager with DOM --><!-- M9 Assignment: Task Manager with Objects -->
                     <h3>Weekly Task List</h3>
                     <p>Enter a task below to manage your goals.</p>
                     <form>
                         <label>Enter Task:</label>
                         <input type="text" id="task-name">
+                        <select id="task-priority">
+                            <option value="High" style="color: red;">High Priority</option>
+                            <option value="Medium" style="color: orange;">Medium Priority</option>
+                            <option value="Low" style="color: green;">Low Priority</option>
+                        </select>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label>Important Task?</label>
+                            <input type="checkbox" id="task-important">
+                        </div>
                         <button id="add-task">Add Task</button>
+                        <button id="delete-tasks">Delete List</button>
                     </form>
                 </div>
                 <script src="js/task-manager.js"></script>
